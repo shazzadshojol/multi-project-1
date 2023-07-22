@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_project_1/Screens/login_screen.dart';
+import 'package:multi_project_1/Screens/notifications.dart';
 
 import 'contact_screen.dart';
 
@@ -82,6 +83,12 @@ class SignInWelcomePage extends StatelessWidget {
                         blurStyle: BlurStyle.outer),
                   ], borderRadius: BorderRadius.circular(15)),
                   child: ListTile(
+                    onTap: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Notifications()))
+                    },
                     title: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 25),
                       child: Text(
